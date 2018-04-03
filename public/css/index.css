@@ -1,0 +1,17 @@
+.header {
+	text-align: center;
+}
+
+body {
+	padding: 10px 15px 0 15px;
+}
+
+img {
+	width: 500px;
+	height: auto;
+}
+
+img.gui {
+	transform: rotate(90deg);
+	padding-top: 100px;
+}
