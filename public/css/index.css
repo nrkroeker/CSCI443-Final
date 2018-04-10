@@ -7,8 +7,10 @@ body {
 }
 
 img {
-	width: 500px;
-	height: auto;
+    max-width: 750px;
+    max-height: 450px;
+	position: relative;
+	padding: 20px;
 }
 
 img.gui {

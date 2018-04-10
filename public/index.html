@@ -1,45 +1,93 @@
-<!DOCTYPE HTML>
-<html lang="en">
-	<head>
-		<link href="./css/index.css" rel="stylesheet" />
-		<title>Databases</title>
-	</head>
-	<body>
-		<div class="header">
-			<h2> CSCI 44300 Database Systems</h2>
-			<h4> Final Project</h4>
-			<a href="https://github.com/nrkroeker/CSCI443-Final" target="_blank">Program Github Link</a>
-		</div>
-		<div class="proposal">
-			<h4>Project Proposal</h4>
-			<p> For this project, David Haines and Nathalie Kroeker will work together to design and implement a database managing data for an animal shelter. The information stored in the database could include important facts about animals currently residing at the shelter, description and attendance at meet and greet adoption events, general employee data, foster parents, and/or adoption records. To expand the project further, the tasks and operations of a shelter could be described more specifically in order to add detail and complexity to the database.</p>
-			<p>Creating the database will integrate many skills learned in class including building a schema, drawing descriptive ER diagrams, normalization, and writing SQL queries to access or alter data. Additional facets of our project will include researching the best ways to connect a database to a program, creating a command line interface to accept user input, and potentially creating a more in-depth GUI displaying or altering records in the database. When working on the project through the rest of the semester, we will construct the relations and schema together. During normalization, we will likely each review the whole schema individually, and then combine our individual comments and ideas. David will do more research into how database connections work in different programming languages, while Nathalie will look more into integrating the database records into a website or GUI. We will write the code and any necessary setup queries in SQL together.</p>
-			<p>We will be most technically challenged in this project when integrating the database with an actual program, because neither of us has much experience with that task. In addition, we want to ensure that we properly normalize and refine the database. So, the challenge of applying general concepts from class into a specific scenario with many different relations will take additional effort. When the project is complete, we can demonstrate the efficacy of the database by walking through the process of an animal's data and records from arrival at the shelter to adoption.</p>
-		</div>
-		<div class="checkpoints">
-			<h4>Checkpoints</h4>
-			<div class="checkpoint">
-				<p>1. 4/2/2018</p>
-				<p>For Checkpoint 1, we created a first version of our schema. This was revised off of a series of notes about what collections of data we want to store, and cleaned up to display a bit neater. We also came up with an initial design plan for the GUI of the program accessing our database. This GUI mainly allows CRUD (create, read, update, delete) functionality for each category of data.</p>
-				<h4>Initial Schema</h4>
-				<div class="photos">
-					<img src="./img/schema_version2.JPG" id="schema">
-				</div>
-				<h4>Initial GUI</h4>
-				<div class="photos">
-					<img src="./img/gui_plan1.JPG" class="gui">
-					<img src="./img/gui_plan2.JPG" class="gui">
-				</div>
-			</div>
-			<br>
-			<div class="checkpoint">
-				<p>2. 4/9/2018</p>
-				<p>For Checkpoint 2, we put the initial schema sketches into ERWin and began refinement. We abstracted various properties and determined all the relations, relationships, cardinality, and data types/nullability. For the program utilizing our database, we began to set up the overall structure, as well as setting up and testing a database connection.</p>
-				<h4>ERWin Schema</h4>
-				<div class="photos">
-					<img src="./img/erwin_schema.jpg" id="erwin-schema">
-				</div>
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html>
+<title>443 Final Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="./css/index.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>FINAL PROJECT</b></h1>
+  <h2><b>CSCI 44300, Database Systems</b></h2>
+  <p>Website for the final project of <span class="w3-tag">Nathalie Kroeker and David Haines</span></p>
+  <a href="https://github.com/nrkroeker/CSCI443-Final" target="_blank"><b>Program Github</b></a>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>INITIAL SCHEMA</b></h3>
+      <h5>Checkpoint 1, <span class="w3-opacity">April 2, 2018</span></h5>
+    </div>
+    <hr>
+    <div class="w3-container">
+		<p>For this checkpoint, we created a first version of our schema. This was revised off of a series of notes about what collections of data we want to store, and cleaned up to display a bit neater. We also came up with an initial design plan for the GUI of the program accessing our database. This GUI mainly allows CRUD (create, read, update, delete) functionality for each category of data.</p>
+	    <h4>Initial Schema</h4>
+		<img src="./img/schema_version2.JPG" id="schema">
+        <hr>
+		<h4>Initial GUI</h4>
+        <img src="./img/gui_plan1.JPG" class="gui" />
+        <img src="./img/gui_plan2.JPG" class="gui" />
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>ABSTRACTING AND PROGRAMMING</b></h3>
+      <h5>Checkpoint 2, <span class="w3-opacity">April 9, 2018</span></h5>
+    </div>
+    <hr>
+    <div class="w3-container">
+		<p>For this checkpoint, we put the initial schema sketches into ERWin and began refinement. We abstracted various properties and determined all the relations, relationships, cardinality, and data types/nullability. For the program utilizing our database, we began to set up the overall structure, as well as setting up and testing a database connection (See Github for code details).</p>
+  	  <h4>ERWin Schema</h4>
+      <img src="./img/erwin_schema.jpg" id="erwin-schema" />
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <div class="w3-container w3-white">
+      <h4><b>Project Proposal</b></h4>
+      <p>For this project, David Haines and Nathalie Kroeker will work together to design and implement a database managing data for an animal shelter. The information stored in the database could include important facts about animals currently residing at the shelter, description and attendance at meet and greet adoption events, general employee data, foster parents, and/or adoption records. To expand the project further, the tasks and operations of a shelter could be described more specifically in order to add detail and complexity to the database.</p>
+	  <p>Creating the database will integrate many skills learned in class including building a schema, drawing descriptive ER diagrams, normalization, and writing SQL queries to access or alter data. Additional facets of our project will include researching the best ways to connect a database to a program, creating a command line interface to accept user input, and potentially creating a more in-depth GUI displaying or altering records in the database. When working on the project through the rest of the semester, we will construct the relations and schema together. During normalization, we will likely each review the whole schema individually, and then combine our individual comments and ideas. David will do more research into how database connections work in different programming languages, while Nathalie will look more into integrating the database records into a website or GUI. We will write the code and any necessary setup queries in SQL together.</p>
+	  <p>We will be most technically challenged in this project when integrating the database with an actual program, because neither of us has much experience with that task. In addition, we want to ensure that we properly normalize and refine the database. So, the challenge of applying general concepts from class into a specific scenario with many different relations will take additional effort. When the project is complete, we can demonstrate the efficacy of the database by walking through the process of an animal's data and records from arrival at the shelter to adoption.</p>
+    </div>
+  </div><hr>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
 </html>

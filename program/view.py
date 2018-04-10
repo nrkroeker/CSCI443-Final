@@ -1,5 +1,6 @@
 from tkinter import *
-from homePage import HomePage
+from pages.homePage import HomePage
+from pages.employeesPage import EmployeesPage
 
 class View:
     root = Tk()
@@ -11,12 +12,16 @@ class View:
         self.root.mainloop()
 
     def switcher(self, page):
+        if (self.currentPage != None):
+            self.currentPage.grid_remove()
         pages = {
-            0: HomePage
+            0: HomePage,
+            1: EmployeesPage
         }
-        currentPage = pages.get(page, "Invalid page")
+        self.currentPage = pages.get(page, "Invalid page")
         try:
-            currentPage().grid(row = 0, column = 0)
+            self.currentPage = self.currentPage(self)
+            self.currentPage.grid(row = 0, column = 0)
         except TypeError:
             print(currentPage)
             self.root.destroy()
